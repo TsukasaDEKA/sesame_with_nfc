@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sesame Devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organization</th>
+      <th>Device</th>
+      <th>Nickname</th>
+      <th>Serial</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sesame_devices.each do |sesame_device| %>
+      <tr>
+        <td><%= sesame_device.organization %></td>
+        <td><%= sesame_device.device_id %></td>
+        <td><%= sesame_device.nickname %></td>
+        <td><%= sesame_device.serial %></td>
+        <td><%= link_to 'Show', sesame_device %></td>
+        <td><%= link_to 'Edit', edit_sesame_device_path(sesame_device) %></td>
+        <td><%= link_to 'Destroy', sesame_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sesame Device', new_sesame_device_path %>

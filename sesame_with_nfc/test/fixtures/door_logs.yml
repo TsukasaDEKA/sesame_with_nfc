@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sesame_device: one
+  user: one
+  before_door_status: 
+  after_door_status: 
+
+two:
+  sesame_device: two
+  user: two
+  before_door_status: 
+  after_door_status: 

@@ -1,0 +1,37 @@
+<%= form_with(model: sesame_device, local: true) do |form| %>
+  <% if sesame_device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sesame_device.errors.count, "error") %> prohibited this sesame_device from being saved:</h2>
+
+      <ul>
+      <% sesame_device.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :organization_id %>
+    <%= form.text_field :organization_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_id %>
+    <%= form.text_field :device_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serial %>
+    <%= form.text_field :serial %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @sesame_device.organization %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @sesame_device.device_id %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @sesame_device.nickname %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @sesame_device.serial %>
+</p>
+
+<%= link_to 'Edit', edit_sesame_device_path(@sesame_device) %> |
+<%= link_to 'Back', sesame_devices_path %>

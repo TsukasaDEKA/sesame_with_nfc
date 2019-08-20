@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @nfc_card.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nfc_card.name %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @nfc_card.uid %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @nfc_card.password %>
+</p>
+
+<p>
+  <strong>Is activated:</strong>
+  <%= @nfc_card.is_activated %>
+</p>
+
+<%= link_to 'Edit', edit_nfc_card_path(@nfc_card) %> |
+<%= link_to 'Back', nfc_cards_path %>

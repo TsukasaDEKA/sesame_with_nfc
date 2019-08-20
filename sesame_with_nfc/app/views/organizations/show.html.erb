@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @organization.name %>
+</p>
+
+<p>
+  <strong>Auth key:</strong>
+  <%= @organization.auth_key %>
+</p>
+
+<p>
+  <strong>Sesame api key:</strong>
+  <%= @organization.sesame_api_key %>
+</p>
+
+<p>
+  <strong>Is activated:</strong>
+  <%= @organization.is_activated %>
+</p>
+
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %>

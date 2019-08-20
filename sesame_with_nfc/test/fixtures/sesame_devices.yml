@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organization: one
+  device_id: MyString
+  nickname: MyString
+  serial: MyString
+
+two:
+  organization: two
+  device_id: MyString
+  nickname: MyString
+  serial: MyString
