@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_20_115700) do
+ActiveRecord::Schema.define(version: 2019_08_23_132114) do
 
   create_table "door_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "sesame_device_id"
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 2019_08_20_115700) do
   end
 
   create_table "nfc_cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "name"
-    t.string "uid"
-    t.string "password"
+    t.bigint "user_id", null: false
+    t.string "name", null: false
+    t.string "uid", null: false
+    t.string "password", null: false
     t.boolean "is_activated", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,30 +35,30 @@ ActiveRecord::Schema.define(version: 2019_08_20_115700) do
   end
 
   create_table "organizations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "auth_key"
-    t.string "sesame_api_key"
+    t.string "name", null: false
+    t.string "auth_key", null: false
+    t.string "sesame_api_key", null: false
     t.boolean "is_activated", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sesame_devices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "organization_id"
-    t.string "device_id"
-    t.string "nickname"
-    t.string "serial"
+    t.bigint "organization_id", null: false
+    t.string "device_id", null: false
+    t.string "nickname", null: false
+    t.string "serial", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_sesame_devices_on_organization_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "organization_id"
-    t.string "name"
-    t.string "auth_key"
-    t.string "password_for_cms"
-    t.integer "roll"
+    t.bigint "organization_id", null: false
+    t.string "name", null: false
+    t.string "auth_key", null: false
+    t.string "password_for_cms", null: false
+    t.integer "roll", null: false
     t.boolean "is_activated", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
