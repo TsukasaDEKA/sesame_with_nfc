@@ -5,11 +5,11 @@ one:
   name: MyString
   uid: MyString
   password: MyString
-  is_activated: 
+  is_activated: True
 
 two:
   user: two
   name: MyString
   uid: MyString
   password: MyString
-  is_activated: 
+  is_activated: True

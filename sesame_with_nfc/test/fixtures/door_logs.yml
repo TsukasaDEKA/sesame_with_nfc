@@ -3,11 +3,11 @@
 one:
   sesame_device: one
   user: one
-  before_door_status: 
-  after_door_status: 
+  before_door_status: True
+  after_door_status: True
 
 two:
   sesame_device: two
   user: two
-  before_door_status: 
-  after_door_status: 
+  before_door_status: True
+  after_door_status: True

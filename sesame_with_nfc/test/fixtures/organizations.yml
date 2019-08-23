@@ -4,10 +4,10 @@ one:
   name: MyString
   auth_key: MyString
   sesame_api_key: MyString
-  is_activated: 
+  is_activated: True
 
 two:
   name: MyString
   auth_key: MyString
   sesame_api_key: MyString
-  is_activated: 
+  is_activated: True

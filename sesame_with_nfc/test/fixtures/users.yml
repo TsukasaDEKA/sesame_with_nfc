@@ -6,7 +6,7 @@ one:
   auth_key: MyString
   password_for_cms: MyString
   roll: 1
-  is_activated: 
+  is_activated: True
 
 two:
   organization: two
@@ -14,4 +14,4 @@ two:
   auth_key: MyString
   password_for_cms: MyString
   roll: 1
-  is_activated: 
+  is_activated: True

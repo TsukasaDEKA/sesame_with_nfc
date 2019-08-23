@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :nfc_cards
   resources :users
   resources :organizations
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  mount Swn::API => '/'
 end
