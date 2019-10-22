@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { auth_key: @user.auth_key, is_activated: @user.is_activated, name: @user.name, organization_id: @user.organization_id, password_for_cms: @user.password_for_cms, roll: @user.roll } }
+      post users_url, params: { user: { auth_key: nil, is_activated: @user.is_activated, name: @user.name, organization_id: @user.organization_id, password_for_cms: @user.password_for_cms, roll: @user.roll } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -34,7 +34,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch user_url(@user), params: { user: { auth_key: @user.auth_key, is_activated: @user.is_activated, name: @user.name, organization_id: @user.organization_id, password_for_cms: @user.password_for_cms, roll: @user.roll } }
+    patch user_url(@user), params: { user: { auth_key: nil, is_activated: @user.is_activated, name: @user.name, organization_id: @user.organization_id, password_for_cms: @user.password_for_cms, roll: @user.roll } }
     assert_redirected_to user_url(@user)
   end
 

@@ -17,7 +17,7 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create organization" do
     assert_difference('Organization.count') do
-      post organizations_url, params: { organization: { auth_key: @organization.auth_key, is_activated: @organization.is_activated, name: @organization.name, sesame_api_key: @organization.sesame_api_key } }
+      post organizations_url, params: { organization: { auth_key: nil, is_activated: @organization.is_activated, name: @organization.name, sesame_api_key: @organization.sesame_api_key } }
     end
 
     assert_redirected_to organization_url(Organization.last)

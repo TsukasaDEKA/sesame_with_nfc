@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  auth_key: MyString
-  sesame_api_key: MyString
+  name: oneString
+  auth_key: <%= SecureRandom.uuid + Time.now.strftime("%Y%m%d%H%M%S%N")%>
+  sesame_api_key: oneString
   is_activated: True
 
 two:
-  name: MyString
-  auth_key: MyString
-  sesame_api_key: MyString
+  name: twoString
+  auth_key: <%= SecureRandom.uuid + Time.now.strftime("%Y%m%d%H%M%S%N")%>
+  sesame_api_key: twoString
   is_activated: True

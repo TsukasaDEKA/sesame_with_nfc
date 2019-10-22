@@ -2,16 +2,16 @@
 
 one:
   organization: one
-  name: MyString
-  auth_key: MyString
-  password_for_cms: MyString
+  name: one
+  auth_key: <%= SecureRandom.uuid + Time.now.strftime("%Y%m%d%H%M%S%N")%>
+  password_for_cms: one
   roll: 1
   is_activated: True
 
 two:
   organization: two
-  name: MyString
-  auth_key: MyString
-  password_for_cms: MyString
+  name: two
+  auth_key: <%= SecureRandom.uuid + Time.now.strftime("%Y%m%d%H%M%S%N")%>
+  password_for_cms: two
   roll: 1
   is_activated: True

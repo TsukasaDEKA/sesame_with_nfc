@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_23_132114) do
+ActiveRecord::Schema.define(version: 2019_08_23_173228) do
 
   create_table "door_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "sesame_device_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_132114) do
     t.boolean "is_activated", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["auth_key"], name: "index_organizations_on_auth_key", unique: true
   end
 
   create_table "sesame_devices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_132114) do
     t.boolean "is_activated", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["auth_key"], name: "index_users_on_auth_key", unique: true
     t.index ["organization_id"], name: "index_users_on_organization_id"
   end
 

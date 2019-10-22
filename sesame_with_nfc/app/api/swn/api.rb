@@ -4,6 +4,9 @@ module Swn
     format :json
     prefix :api
 
+    helpers Swn::Helpers::AuthenticateHelper
+    helpers Swn::Helpers::EncryptHelper
+
     begin
       ActiveRecord::Base.logger = Logger.new('log/sesame_with_nfc.log')
     end
@@ -15,5 +18,8 @@ module Swn
     # rescue_from ActiveRecord::RecordNotSaved, with: :unprocessable!
 
     mount Swn::Organizations
+    mount Swn::Users
+    mount Swn::SystemAdmin
+
   end
 end
